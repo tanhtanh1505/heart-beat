@@ -1,0 +1,90 @@
+@font-face {
+	font-family: 'Righteous';
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://fonts.gstatic.com/s/righteous/v13/1cXxaUPXBpj2rGoU7C9WiHGA.ttf) format('truetype');
+  }
+  @keyframes colorFlip {
+	0% {
+	  color: #fafafa;
+	}
+	/* 49% {
+	  color: #fafafa;
+	} */
+	50% {
+	  color: #f02544;
+	}
+	100% {
+	  color: #fafafa;
+	}
+  }
+  @keyframes colorFlipInverse {
+	0% {
+	  color: #f02544;
+	}
+	/* 49% {
+	  color: #f02544;
+	}*/
+	50% {
+	  color: #fafafa;
+	} 
+	100% {
+	  color: #f02544;
+	}
+  }
+  @keyframes fadeInRight {
+	0% {
+	  left: 100%;
+	}
+	100% {
+	  left: 50%;
+	}
+  }
+  @keyframes fadeInBottom {
+	0% {
+	  top: 100%;
+	}
+	100% {
+	  top: 50%;
+	}
+  }
+  body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Righteous', cursive;
+	font-size: 2.5em;
+	line-height: 1em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	background: #111;
+	color: #fafafa;
+	animation-delay: 1s;
+	animation: colorFlip 1.25s infinite;
+	overflow: hidden;
+  }
+  body .love {
+	color: #f02544;
+	animation-delay: 1s;
+	animation: colorFlipInverse 1.25s infinite;
+  }
+  body .from-right,
+  body .from-bottom {
+	position: absolute;
+	width: 10em;
+	height: 2em;
+	margin-left: -5em;
+	left: 50%;
+	top: 50%;
+	text-align: center;
+  }
+  body .from-right {
+	margin-top: -1em;
+	animation: fadeInRight 2s 1;
+  }
+  body .from-bottom {
+	animation: fadeInBottom 2s 1;
+  }
